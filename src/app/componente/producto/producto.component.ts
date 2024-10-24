@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { HomeComponent } from '../home/home.component';
-import { Producto } from '../model/producto';
+import { HomeComponent } from '../../home/home.component';
+import { Producto } from '../../model/producto';
 import { MessageService } from 'primeng/api';
-import { ProductoService } from '../service/producto.service';
+import { ProductoService } from '../../service/producto.service';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { ButtonGroupModule } from 'primeng/buttongroup';
@@ -45,7 +45,7 @@ export class ProductoComponent {
   }
 
   getAllProductos(){
-    this.productoService.getProdcuctos().subscribe((data)=>{
+    this.productoService.getProductos().subscribe((data)=>{
       this.productos=data;
       console.log(this.productos);
     });
